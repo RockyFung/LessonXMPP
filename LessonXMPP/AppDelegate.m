@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginController.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // 1. 获取storyboard
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LoginAndRegist" bundle:nil];
+    
+    // 2. 获取login控制器
+    LoginController *login = [storyboard instantiateInitialViewController];
+    
+    // 3. 跳转
+    // 跳转前要先把window显示出来
+    [self.window makeKeyAndVisible];
+    // 用window的子控制器跳转
+    [self.window.rootViewController presentViewController:login animated:NO completion:nil];
+    
     return YES;
 }
 

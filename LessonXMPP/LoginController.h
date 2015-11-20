@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LoginController.h
 //  LessonXMPP
 //
 //  Created by lanou on 15/11/19.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
 
+@interface LoginController : UIViewController
 
 @end
-
